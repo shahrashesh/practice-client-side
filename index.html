@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To Do Board</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="scripts/handlebars-v4.0.12.js"></script>
+    </head>
+    <body>
+        <div class="background">
+            <div class="main-wrapper">
+                    <script id="card-handlebars" type="text/x-handlebars-template">
+                        <li class="card" id="{{cardId}}">
+                            <div class="cardTitle">{{cardText}}</div><div class="deleteIcon fa fa-trash"></div><div class="editIcon fa fa-pencil-square-o"></div>
+                        </li>
+                    </script>
+                <div class="sortable-wrapper">
+                    <div class="listHeading">To Do</div>
+                    <ul id="toDo" class="sortable"></ul>
+                    <div id="newCardAreaContainer">
+                                <textarea id="addCardText"></textarea>
+                                <button id="addCardBtn">Add Card</button>
+                        </div>
+                </div>
+                <div class="sortable-wrapper">
+                    <div class="listHeading">Doing</div>
+                    <ul id="doing" class="sortable"></ul>
+                </div>
+                <div class="sortable-wrapper">
+                    <div class="listHeading">Done</div>
+                    <ul id="done" class="sortable"></ul>
+                </div>
+                <div id="cardEditorModal">
+                    <div id="cardEditor">
+                        <textarea id="cardEditorArea"></textarea>
+                        <button id="saveBtn">Save</button>
+                    </div>
+                    <span id="closeIcon">X</span>
+                </div>
+            </div> 
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
